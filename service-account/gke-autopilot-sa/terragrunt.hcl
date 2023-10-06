@@ -7,9 +7,11 @@ inputs = {
   google_service_account_account_id = "gke-autopilot"
   google_service_account_display_name = "GKE autopilot service account"
 
-  # IMPORTANT! For google_project_iam_binding variable
-  # if members value is not set (null or empty) 
-  # then it will set the service account email of google_service_account_account_id variable  google_project_iam_binding = [
+  # IMPORTANT! For google_project_iam_binding, google_project_iam_member
+  # if members / member value is not set (null or empty) 
+  # then it will set the service account email of google_service_account_account_id variable  
+
+  google_project_iam_member = [
     {
       role = "roles/monitoring.viewer"
     },
@@ -27,10 +29,10 @@ inputs = {
     }
   ]
 
-  google_service_account_iam_binding = [
+  google_service_account_iam_member = [
     {
       role = "roles/iam.serviceAccountTokenCreator"
-      members = [ "user:ronald.ramrod.93@gmail.com" ]
+      member = "user:ronald.ramrod.93@gmail.com"
     }
   ]
 }

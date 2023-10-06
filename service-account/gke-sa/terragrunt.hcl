@@ -4,15 +4,28 @@ include "root" {
 
 inputs = {
 
-  google_service_account_account_id = "sa-terraform"
-  google_service_account_display_name = "Terraform service account"
+  google_service_account_account_id = "gke-sa"
+  google_service_account_display_name = "GKE service account"
 
   # IMPORTANT! For google_project_iam_binding, google_project_iam_member
   # if members / member value is not set (null or empty) 
   # then it will set the service account email of google_service_account_account_id variable  
+
   google_project_iam_member = [
     {
-      role = "roles/editor"
+      role = "roles/monitoring.viewer"
+    },
+    {
+      role = "roles/monitoring.metricWriter"
+    },
+    {
+      role = "roles/logging.logWriter"
+    },
+    {
+      role = "roles/stackdriver.resourceMetadata.writer"
+    },
+    {
+      role = "roles/autoscaling.metricsWriter"
     }
   ]
 
