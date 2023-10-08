@@ -18,17 +18,18 @@ jobs:
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v4
+      - name: 'Replace git config url'
+        run: git config --global url."https://${{ github.repository_owner }}:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
       - name: 'Terragrunt Format'
         uses: the-commons-project/terragrunt-github-actions@master
-        with:
+        with: 
           tf_actions_version: ${{ env.tf_version }}
           tg_actions_version: ${{ env.tg_version }}
           tf_actions_binary: 'terraform'
           tf_actions_subcommand: 'fmt'
           tf_actions_working_dir: ${{ env.tf_working_dir }}
           tf_actions_comment: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:          
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
       - name: 'Terragrunt Init'
         uses: the-commons-project/terragrunt-github-actions@master
@@ -39,7 +40,6 @@ jobs:
           tf_actions_working_dir: ${{ env.tf_working_dir }}
           tf_actions_comment: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
       - name: 'Terragrunt Validate'
         uses: the-commons-project/terragrunt-github-actions@master
@@ -51,7 +51,6 @@ jobs:
           tf_actions_working_dir: ${{ env.tf_working_dir }}
           tf_actions_comment: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
       - name: 'Terragrunt Plan'
         uses: the-commons-project/terragrunt-github-actions@master
@@ -62,6 +61,5 @@ jobs:
           tf_actions_working_dir: ${{ env.tf_working_dir }}
           tf_actions_comment: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
       
