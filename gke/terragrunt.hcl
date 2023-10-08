@@ -1,5 +1,5 @@
 terraform {
-    source = "git::https://github.com/ronaldramrod93/pf_tf-modules.git//modules/gke?ref=main"
+    source = "git::git@github.com:ronaldramrod93/pf_tf-modules.git//modules/gke?ref=main"
 
 }
 
