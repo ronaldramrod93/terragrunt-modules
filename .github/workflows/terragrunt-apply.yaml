@@ -30,7 +30,7 @@ jobs:
             git config --global url."https://${{ github.repository_owner }}:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
       - name: 'Terragrunt Plan'
-        uses: the-commons-project/terragrunt-github-actions@master
+        uses: gruntwork-io/terragrunt-action@v1
         with:
           tf_version: ${{ env.tf_version }}
           tg_version: ${{ env.tg_version }}
