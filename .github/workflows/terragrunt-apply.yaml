@@ -8,8 +8,8 @@ on:
         required: true
         type: string
 env:
-  tf_version: 'latest'
-  tg_version: 'latest'
+  tf_version: '1.6.0'
+  tg_version: '0.52.1'
   tf_working_dir: ${{ inputs.tgPath }}
 jobs:
   terragrunt:
