@@ -10,6 +10,9 @@ inputs = {
   google_compute_subnetwork_name = "gke-nodes-1"
   google_compute_subnetwork_description = "Subnet used by nodes in GKE cluster"
 
+  # Best-practice: https://cloud.google.com/kubernetes-engine/docs/best-practices/networking#use-private-google-access
+  google_compute_subnetwork_private_ip_google_access = true
+
   # Best-practice: https://cloud.google.com/kubernetes-engine/docs/best-practices/networking#plan-ip-allotment
   # For private clusters, you must define a node subnet, a Pod IP address range, and a Service IP address range.
   
@@ -19,11 +22,11 @@ inputs = {
   google_compute_subnetwork_secondary_ip_range = [
     {
       range_name = "gke-pods-1"
-      ip_cidr_range = "10.2.0.0/27"
+      ip_cidr_range = "10.2.0.0/24"
     },
     {
       range_name = "gke-services-1"
-      ip_cidr_range = "10.2.1.0/27"
+      ip_cidr_range = "10.2.2.0/27"
     }
   ]
 
