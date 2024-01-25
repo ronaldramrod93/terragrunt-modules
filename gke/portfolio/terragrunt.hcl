@@ -21,7 +21,7 @@ inputs = {
 
   google_container_cluster_master_authorized_networks_config_cidr_blocks = [
     {
-      cidr_block = "34.139.41.128/32"
+      cidr_block = "34.138.83.224/32"
       display_name = "Cloud shell IP address"
     }
   ]
@@ -37,12 +37,11 @@ inputs = {
   # GKE network policies are configured through the Kubernetes Network Policy API to enforce a cluster's Pod communication.
   google_container_cluster_network_policy_enabled = true
 
-  google_container_cluster_deletion_protection = false
-
   google_container_node_pool_node_count = 1
 
   google_container_node_pool_preemptible = true
 
   google_container_node_pool_machine_type = "e2-standard-4"
 
+  google_container_cluster_deletion_protection = false
 }
