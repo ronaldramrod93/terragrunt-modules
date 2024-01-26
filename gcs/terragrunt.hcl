@@ -8,7 +8,7 @@ remote_state {
   backend = "gcs"
 
   config = {
-    bucket  = "tfstate-portfolio"
+    bucket = "tfstate-portfolio"
     prefix = "gcs/${path_relative_to_include()}"
   }
 }

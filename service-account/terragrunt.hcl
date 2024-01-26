@@ -8,12 +8,12 @@ remote_state {
   backend = "gcs"
 
   config = {
-    bucket  = "pf-tfstate"
+    bucket = "tfstate-portfolio"
     prefix = "service-account/${path_relative_to_include()}"
   }
 }
 
 inputs = {
-  project_id = "model-craft-397223"
+  project_id = "sre-devops-portfolio"
   region     = "us-central1"
 }
