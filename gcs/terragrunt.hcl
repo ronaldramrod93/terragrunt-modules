@@ -3,15 +3,15 @@ terraform {
 
 }
 
-//remote_state {
-//  
-//  backend = "gcs"
-//
-//  config = {
-//    bucket  = "pf-tfstate"
-//    prefix = "gke/${path_relative_to_include()}"
-//  }
-//}
+remote_state {
+  
+  backend = "gcs"
+
+  config = {
+    bucket  = "tfstate-portfolio"
+    prefix = "gcs/${path_relative_to_include()}"
+  }
+}
 
 inputs = {
   project_id = "sre-devops-portfolio"

@@ -3,7 +3,7 @@ include "root" {
 }
 
 inputs = {
-    bucket_name = "tfstate"
+    bucket_name = "tfstate-portfolio"
     location    = "us-central1"
     enable_versioning = true
     labels = {
