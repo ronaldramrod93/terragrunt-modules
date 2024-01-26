@@ -32,7 +32,7 @@ inputs = {
   google_service_account_iam_member = [
     {
       role = "roles/iam.serviceAccountTokenCreator"
-      member = "user:ronald.ramrod.93@gmail.com"
+      member = "user:roka.sre.devops.93@gmail.com"
     }
   ]
 }
