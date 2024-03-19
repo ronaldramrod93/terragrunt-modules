@@ -1,4 +1,4 @@
-# pf_tg-modules
+# Terragrunt modules
 
 ## Pre requesites
 - Authentication
