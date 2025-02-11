@@ -1,14 +1,16 @@
 # Terragrunt modules
 
-## Pre requesites
+## GCP terragrunt modules
+
+### Pre requesites
 - Authentication
     - If you think to use the modules **locally** I recommend authenticate using [User Application Default Credentials ("ADCs")](https://cloud.google.com/sdk/gcloud/reference/auth/application-default) as a primary authentication method. You can enable ADCs by running the command: `gcloud auth application-default login`
 
-## Usage
-In order to use the tg modules listed here you have to follow the next steps:
-1. Create a folder inside the terragrunt module you will use and put a name related with the resource you will create. For instance:
+### Usage
+In order to use this modules you have to follow the next steps:
+1. Create a folder within the terragrunt module you want to use and put it a name related with the resource you will create. For instance:
     ```
-    -> service account folder (terragrunt module folder)
+    -> gcp/service-account (terragrunt module folder)
         -> terragrunt.hcl (general configuration and terraform module used)
         -> gke-sa (folder with terragrunt configuration to create a SA used in GKE cluster)
             -> terragrunt.hcl
