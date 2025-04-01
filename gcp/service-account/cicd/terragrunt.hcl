@@ -4,7 +4,7 @@ include "root" {
 
 inputs = {
 
-  google_service_account_account_id = "cicd-sa"
+  google_service_account_account_id = "cicd"
 
   google_service_account_display_name = "Service account used by CICD processes"
 

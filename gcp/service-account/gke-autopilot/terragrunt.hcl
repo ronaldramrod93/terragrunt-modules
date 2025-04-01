@@ -5,7 +5,7 @@ include "root" {
 inputs = {
 
   google_service_account_account_id = "gke-autopilot"
-  google_service_account_display_name = "GKE autopilot service account"
+  google_service_account_display_name = "GKE service account for autopilot cluster"
 
   # IMPORTANT! For google_project_iam_binding, google_project_iam_member
   # if members / member value is not set (null or empty) 
@@ -26,13 +26,6 @@ inputs = {
     },
     {
       role = "roles/autoscaling.metricsWriter"
-    }
-  ]
-
-  google_service_account_iam_member = [
-    {
-      role = "roles/iam.serviceAccountTokenCreator"
-      member = "user:ronald.ramrod.93@gmail.com"
     }
   ]
 }
