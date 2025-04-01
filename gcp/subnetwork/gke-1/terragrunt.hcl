@@ -16,6 +16,7 @@ inputs = {
   # Best-practice: https://cloud.google.com/kubernetes-engine/docs/best-practices/networking#plan-ip-allotment
   # For private clusters, you must define a node subnet, a Pod IP address range, and a Service IP address range.
   
+  # The node IP address range is defined as the primary IP range
   google_compute_subnetwork_ip_cidr_range = "10.1.0.0/28"
 
   # The Pod and Service IP address range always will be defined as secondary IP ranges
