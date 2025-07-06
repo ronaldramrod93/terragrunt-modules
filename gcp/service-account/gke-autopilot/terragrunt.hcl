@@ -26,6 +26,9 @@ inputs = {
     },
     {
       role = "roles/autoscaling.metricsWriter"
+    },
+    {
+      role = "roles/container.defaultNodeServiceAccount"
     }
   ]
 }
