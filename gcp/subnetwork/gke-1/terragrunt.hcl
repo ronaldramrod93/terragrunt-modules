@@ -5,9 +5,9 @@ include "root" {
 inputs = {
 
   # Prerequisite: The compute network must already be created
-  google_compute_network_name = "us-ce1-dev-pj-1"
+  google_compute_network_name = "cp-it-dev-vpc-1"
 
-  google_compute_subnetwork_name = "gke-nodes-1"
+  google_compute_subnetwork_name = "cp-it-us-dev-vpc-1-gke-subnet-1"
   google_compute_subnetwork_description = "Subnet used by nodes in GKE cluster"
 
   # Best-practice: https://cloud.google.com/kubernetes-engine/docs/best-practices/networking#use-private-google-access
