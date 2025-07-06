@@ -1,3 +1,6 @@
+# Exclude common HCL file with custom information
+gcp/common.hcl
+
 # Local .terragrunt directories
 **/.terragrunt-cache/*
 
