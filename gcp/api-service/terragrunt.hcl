@@ -1,5 +1,5 @@
 terraform {
-  source = "git::https://github.com/ronaldramrod93/terraform-modules.git//gcp/api_service?ref=main"
+  source = "git::https://github.com/ronaldramrod93/terraform-modules.git//gcp/api-service?ref=main"
 }
 
 locals {
@@ -12,7 +12,7 @@ remote_state {
 
   config = {
     bucket = "${local.common_vars.locals.remote_state_config_bucket}"
-    prefix = "gcs/${path_relative_to_include()}"
+    prefix = "api-service/${path_relative_to_include()}"
   }
   
 }
