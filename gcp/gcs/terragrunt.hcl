@@ -19,5 +19,5 @@ remote_state {
 
 inputs = {
   project_id = "${local.common_vars.locals.project_id}"
-  region     = "us-central1"
+  region     = "${local.common_vars.locals.region}"
 }

@@ -3,7 +3,7 @@ include "root" {
 }
 
 inputs = {
-  bucket_name = "tfstate-store-072025"
+  bucket_name = "portfolio-tfstate-25102025"
   
   location    = "us-central1"
   
