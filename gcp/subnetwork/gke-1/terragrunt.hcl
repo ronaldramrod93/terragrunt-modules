@@ -23,7 +23,7 @@ inputs = {
   google_compute_subnetwork_secondary_ip_range = [
     {
       range_name = "gke-pods-1"
-      ip_cidr_range = "10.2.0.0/25"
+      ip_cidr_range = "10.2.0.0/24"
     },
     {
       range_name = "gke-services-1"
