@@ -3,6 +3,7 @@ terraform {
 
 }
 
+# Call common variables from common.hcl file
 locals {
   common_vars = read_terragrunt_config(find_in_parent_folders("common.hcl"))
 }
@@ -20,5 +21,5 @@ remote_state {
 
 inputs = {
   project_id = "${local.common_vars.locals.project_id}"
-  region     = "us-central1"
+  region     = "${local.common_vars.locals.region}"
 }
