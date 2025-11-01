@@ -37,6 +37,10 @@ inputs = {
   # GKE network policies are configured through the Kubernetes Network Policy API to enforce a cluster's Pod communication.
   google_container_cluster_network_policy_enabled = true
 
+  # Best-practice:  https://cloud.google.com/kubernetes-engine/docs/best-practices/networking#dataplane-v2
+  # GKE Dataplane V2 provides an integrated network security and visibility experience.
+  google_container_cluster_datapath_provider = "ADVANCED_DATAPATH"
+
   google_container_node_pool_node_count = 1
 
   google_container_node_pool_preemptible = true
