@@ -6,7 +6,8 @@ inputs = {
 
   api_services = [
     "compute.googleapis.com",
-    "container.googleapis.com"
+    "container.googleapis.com",
+    "mesh.googleapis.com"
   ] 
 
 }
