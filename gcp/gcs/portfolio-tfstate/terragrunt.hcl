@@ -2,8 +2,13 @@ include "root" {
   path = find_in_parent_folders()
 }
 
+locals {
+  common_vars = read_terragrunt_config(find_in_parent_folders("common.hcl"))
+}
+
 inputs = {
-  bucket_name = "portfolio-tfstate-25102025"
+
+  bucket_name = "${local.common_vars.locals.remote_state_config_bucket}"
   
   location    = "us-central1"
   
